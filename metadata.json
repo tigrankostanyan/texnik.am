@@ -1,0 +1,7 @@
+{
+  "name": "Varpet Marketplace PWA",
+  "description": "Progressive Web App ծառայությունների մարքեթփլեյս հարթակ՝ մասնագետների և հաճախորդների համար",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+

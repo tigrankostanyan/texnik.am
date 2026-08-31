@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-primary: #1e40af;
+    --color-primary-hover: #1e3a8a;
+    --color-primary-light: #eff6ff;
+    --color-accent: #0284c7;
+    --color-accent-light: #f0f9ff;
+    --color-bg: #f8f9fa;
+    --color-surface: #ffffff;
+    --color-text-main: #0f172a;
+    --color-text-muted: #64748b;
+    --color-border: #e2e8f0;
+    --radius-main: 12px;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', 'Noto Sans Armenian', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text-main);
+    letter-spacing: -0.01em;
+  }
+
+  button,
+  [role="button"],
+  a,
+  select,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  input[type="checkbox"],
+  input[type="radio"],
+  label[for],
+  summary {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  [role="button"][aria-disabled="true"],
+  select:disabled,
+  input:disabled {
+    cursor: not-allowed;
+  }
+}
+
+/* Custom utility classes referencing CSS variables */
+.bg-brand-primary {
+  background-color: var(--color-primary);
+}
+.text-brand-primary {
+  color: var(--color-primary);
+}
+.border-brand-primary {
+  border-color: var(--color-primary);
+}
+.hover\:bg-brand-primary-hover:hover {
+  background-color: var(--color-primary-hover);
+}
+.bg-brand-primary-light {
+  background-color: var(--color-primary-light);
+}
+.bg-brand-accent {
+  background-color: var(--color-accent);
+}
+.text-brand-accent {
+  color: var(--color-accent);
+}
+.bg-brand-surface {
+  background-color: var(--color-surface);
+}
+
+/* Professional Polish elevation & cards */
+.card-polish {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-main);
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.04), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
+  transition: all 0.2s ease-in-out;
+}
+
+.card-polish:hover {
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.06), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Leaflet map styling tweaks */
+.leaflet-container {
+  font-family: inherit;
+  border-radius: var(--radius-main);
+  z-index: 10;
+}
